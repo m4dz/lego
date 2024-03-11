@@ -1,0 +1,33 @@
+Name = "alwaysdata"
+Description = ''''''
+URL = "https://www.alwaysdata.com/"
+Code = "alwaysdata"
+Since = "v0.4.0"
+
+Example = '''
+ALWAYSDATA_API_KEY=1234567898765432 \
+ALWAYSDATA_ACCOUNT=my-account \
+lego --email you@example.com --dns alwaysdata --domains my.example.org run
+'''
+
+Additional = '''
+## API Key
+
+To create an API Key for your profile, go to the [Access tokens](https://admin.alwaysdata.com/token/) page in the alwaysdats's admin panel.
+
+## Account
+
+You can specify the account owning the domains by specifying an the `ALWAYSDATA_ACCOUNT` environment variable.
+If you've got only one account under your profile, this variable is *not* mandatory.
+'''
+
+[Configuration]
+  [Configuration.Credentials]
+    ALWAYSDATA_API_KEY = "Profile Access token"
+  [Configuration.Additional]
+    ALWAYSDATA_ACCOUNT = "The account owning the domain against which performing requests"
+
+[Links]
+  Panel = "https://admin.alwaysdata.com/token/"
+  API = "https://api.alwaysdata.com/v1/record/doc/"
+  Docs = "https://help.alwaysdata.com/en/api/usage/"
